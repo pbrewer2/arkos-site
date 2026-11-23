@@ -8,13 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
 <script>(function(){var h=location.hash,p=location.pathname;if(p==='/'||p==='/index.html'){if(h==='#shop')location.replace('/shop/');else if(h==='#projects')location.replace('/projects/');}})();</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><g id="knot"><polygon points="620,125 511,124 497,136 178,731 88,887 92,900 707,902 726,896 696,837 657,790 272,790 269,782 625,138"/><polygon points="662,191 383,688 371,728 398,739 492,735 667,397 677,397 1007,937 1062,1017 1082,1020 1129,948 1116,909 973,689 684,201"/><polygon points="1015,1037 913,887 683,514 671,518 622,625 820,936 819,952 85,952 76,959 83,980 141,1058 186,1051 1010,1050"/></g></defs></svg>
 <div class="wrap">
   <nav>
-    <a class="logo" href="/">Arkos Designs</a>
+    <a class="logo" href="/" aria-label="Arkos Designs"><svg class="mark" viewBox="76 124 1053 934" aria-hidden="true" focusable="false"><use href="#knot"/></svg>rkos Designs</a>
     <div class="nr">
       <a href="/shop/"{% if page.url contains '/shop' %} aria-current="page"{% endif %}>Shop</a>
       <a href="/projects/"{% if page.url contains '/projects' %} aria-current="page"{% endif %}>Projects</a>

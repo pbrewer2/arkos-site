@@ -1,13 +1,13 @@
 :root{
   --bg:#E9EBEC; --surface:#DDE0E2; --ink:#14181D; --mid:#59636D; --line:#B9BFC4;
-  --temper:#2B4C8C; --spark:#E8501A; --on-temper:#fff;
+  --temper:#2B4C8C; --title:#355E3B; --title-contact:#8FC29B; --spark:#E8501A; --on-temper:#fff;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#14181D;--surface:#1D232A;--ink:#E9EBEC;--mid:#9AA4AE;--line:#35404A;--temper:#7FA2E6;--spark:#FF7A45;--on-temper:#14181D}
+  :root:not([data-theme="light"]){--bg:#14181D;--surface:#1D232A;--ink:#E9EBEC;--mid:#9AA4AE;--line:#35404A;--temper:#7FA2E6;--title:#8DBF98;--title-contact:#2F5A38;--spark:#FF7A45;--on-temper:#14181D}
 }
-:root[data-theme="dark"]{--bg:#14181D;--surface:#1D232A;--ink:#E9EBEC;--mid:#9AA4AE;--line:#35404A;--temper:#7FA2E6;--spark:#FF7A45;--on-temper:#14181D}
+:root[data-theme="dark"]{--bg:#14181D;--surface:#1D232A;--ink:#E9EBEC;--mid:#9AA4AE;--line:#35404A;--temper:#7FA2E6;--title:#8DBF98;--title-contact:#2F5A38;--spark:#FF7A45;--on-temper:#14181D}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Barlow,system-ui,sans-serif}
@@ -23,9 +23,9 @@ nav a.cta{background:var(--ink);color:var(--bg);padding:9px 18px;text-decoration
 .hero{padding:56px 0 72px}
 .hero h1{z-index:2;font-size:clamp(76px,17vw,220px);letter-spacing:-.01em;position:relative;display:inline-block}
 .hero h1 span{display:block}
-.hero h1 .solid{position:relative;z-index:1;color:var(--ink);
-  animation:print 2.4s steps(24,end) both}
-@keyframes print{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(-30% -5% -30% -5%)}}
+.hero h1 .solid{position:relative;z-index:1;color:var(--title);
+  animation:print 2.4s steps(24,end) backwards}
+@keyframes print{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(-40% -5% -40% -5%)}}
 .hero h1 .ghost{position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px var(--line)}
 .layers{position:relative;z-index:1;height:14px;margin:-4px 0 28px;background:repeating-linear-gradient(var(--temper) 0 2px,transparent 2px 5px);width:min(100%,520px)}
 .hero p.lead{font-size:clamp(20px,2.4vw,26px);max-width:34ch;margin:0 0 28px;line-height:1.35}
@@ -112,3 +112,10 @@ nav{gap:12px}
 .post pre{overflow-x:auto;background:var(--surface);padding:14px}
 .post code{font-size:.92em}
 .post a.back{display:inline-block;margin-top:32px}
+
+/* title color and knot mark */
+h1,h2,h3{color:var(--title)}
+.contact h2{color:var(--title-contact)}
+.mark{height:.7em;aspect-ratio:1053/934;width:auto;display:inline-block;vertical-align:baseline;fill:currentColor;margin-right:.02em;overflow:visible}
+.ghost .mark{fill:none;stroke:var(--line);stroke-width:7}
+nav .logo .mark{height:.8em}
