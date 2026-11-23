@@ -21,14 +21,13 @@ nav a.cta{background:var(--ink);color:var(--bg);padding:9px 18px;text-decoration
 
 /* Hero: headline "printed" layer by layer */
 .hero{padding:56px 0 72px}
-.hero h1{font-size:clamp(76px,17vw,220px);letter-spacing:-.01em;position:relative;display:inline-block}
+.hero h1{z-index:2;font-size:clamp(76px,17vw,220px);letter-spacing:-.01em;position:relative;display:inline-block}
 .hero h1 span{display:block}
 .hero h1 .solid{position:relative;z-index:1;color:var(--ink);
-  -webkit-mask:linear-gradient(#000 0 0) top/100% 100% no-repeat;mask:linear-gradient(#000 0 0) top/100% 100% no-repeat;
   animation:print 2.4s steps(24,end) both}
 @keyframes print{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(-30% -5% -30% -5%)}}
 .hero h1 .ghost{position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px var(--line)}
-.layers{height:14px;margin:18px 0 28px;background:repeating-linear-gradient(var(--temper) 0 2px,transparent 2px 5px);width:min(100%,520px)}
+.layers{position:relative;z-index:1;height:14px;margin:-4px 0 28px;background:repeating-linear-gradient(var(--temper) 0 2px,transparent 2px 5px);width:min(100%,520px)}
 .hero p.lead{font-size:clamp(20px,2.4vw,26px);max-width:34ch;margin:0 0 28px;line-height:1.35}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-block;padding:14px 24px;font-weight:500;text-decoration:none;border-radius:2px;background:var(--temper);color:var(--on-temper)}
