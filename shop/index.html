@@ -7,7 +7,24 @@ description: Bear Spray Cage, designed and 3D printed by Arkos Designs.
   <div class="wrap">
     <h2>Shop</h2>
     <div class="shop">
-      <div><video class="vid" controls muted loop playsinline preload="metadata" poster="/assets/img/print-poster.jpg" aria-label="Timelapse of the bear spray holder printing in PETG"><source src="/assets/video/bear-spray-holder-print.mp4" type="video/mp4"></video></div>
+      <div class="gallery" id="gallery">
+  <div class="g-main"><img src="/assets/img/bear-spray-cage-1.jpg" alt="Orange Bear Spray Cage next to a black cage fitted to a can of bear spray"></div>
+  <div class="g-thumbs">
+    <button class="g-thumb on" type="button" data-type="img" data-src="/assets/img/bear-spray-cage-1.jpg" data-alt="Orange Bear Spray Cage next to a black cage fitted to a can of bear spray" aria-label="Photo 1"><img src="/assets/img/bear-spray-cage-1-thumb.jpg" alt="" loading="lazy"></button>
+    <button class="g-thumb" type="button" data-type="img" data-src="/assets/img/bear-spray-cage-2.jpg" data-alt="Bear Spray Cage mounted on a mountain bike top tube with zip ties" aria-label="Photo 2"><img src="/assets/img/bear-spray-cage-2-thumb.jpg" alt="" loading="lazy"></button>
+    <button class="g-thumb" type="button" data-type="img" data-src="/assets/img/bear-spray-cage-3.jpg" data-alt="Top view of a Bear Spray Cage holding bear spray on a bike frame" aria-label="Photo 3"><img src="/assets/img/bear-spray-cage-3-thumb.jpg" alt="" loading="lazy"></button>
+    <button class="g-thumb" type="button" data-type="img" data-src="/assets/img/bear-spray-cage-4.jpg" data-alt="Two Bear Spray Cages, one orange and one black, standing side by side" aria-label="Photo 4"><img src="/assets/img/bear-spray-cage-4-thumb.jpg" alt="" loading="lazy"></button>
+    <button class="g-thumb" type="button" data-type="img" data-src="/assets/img/bear-spray-cage-5.jpg" data-alt="Side view of a black Bear Spray Cage holding a can of bear spray" aria-label="Photo 5"><img src="/assets/img/bear-spray-cage-5-thumb.jpg" alt="" loading="lazy"></button>
+    <button class="g-thumb vid" type="button" data-type="video" data-src="/assets/video/bear-spray-holder-print.mp4" data-poster="/assets/img/print-poster.jpg" data-alt="Timelapse of the Bear Spray Cage printing in PETG" aria-label="Print timelapse video"><img src="/assets/img/print-poster.jpg" alt="" loading="lazy"></button>
+  </div>
+</div>
+<script>
+(function(){var g=document.getElementById('gallery');if(!g)return;var main=g.querySelector('.g-main'),btns=g.querySelectorAll('.g-thumb');
+btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');main.textContent='';
+if(b.dataset.type==='video'){var v=document.createElement('video');v.controls=true;v.muted=true;v.loop=true;v.setAttribute('playsinline','');v.poster=b.dataset.poster;v.setAttribute('aria-label',b.dataset.alt);var s=document.createElement('source');s.src=b.dataset.src;s.type='video/mp4';v.appendChild(s);main.appendChild(v);}
+else{var i=document.createElement('img');i.src=b.dataset.src;i.alt=b.dataset.alt;main.appendChild(i);}});});})();
+</script>
+
       <div>
         <h3 style="font-size:44px;margin-bottom:10px">Bear Spray Cage</h3>
         <div class="price">$40.00</div>
