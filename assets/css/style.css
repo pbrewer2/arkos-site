@@ -118,3 +118,14 @@ h1,h2,h3{color:var(--title)}
 .mark{height:.7em;aspect-ratio:1053/934;width:auto;display:inline-block;vertical-align:baseline;fill:currentColor;margin-right:.02em;overflow:visible}
 .ghost .mark{fill:none;stroke:var(--line);stroke-width:7}
 nav .logo .mark{height:.8em}
+
+/* shop gallery */
+.gallery{min-width:0}
+.g-main{aspect-ratio:4/5;background:var(--surface);display:flex;align-items:center;justify-content:center}
+.g-main img,.g-main video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.g-main img{background:var(--surface)}
+.g-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;margin-top:10px}
+.g-thumb{padding:0;border:2px solid transparent;background:var(--surface);cursor:pointer;aspect-ratio:1;overflow:hidden;position:relative;border-radius:0}
+.g-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.g-thumb.on{border-color:var(--temper)}
+.g-thumb.vid::after{content:"\25B6";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;background:rgba(0,0,0,.35)}
