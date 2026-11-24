@@ -6,8 +6,9 @@ description: Bear Spray Cage, designed and 3D printed by Arkos Designs.
 <section id="shop" class="page-top">
   <div class="wrap">
     <h2>Shop</h2>
-    <div class="shop">
-      <div class="gallery" id="gallery">
+    <p class="shop-jump"><a href="#bear-spray-cage">Bear Spray Cage</a><a href="#wall-guards">Door Knob Wall Guards</a></p>
+    <div class="shop" id="bear-spray-cage">
+      <div class="gallery">
   <div class="g-main"><img src="/assets/img/bear-spray-cage-1.jpg" alt="Orange Bear Spray Cage next to a black cage fitted to a can of bear spray"></div>
   <div class="g-thumbs">
     <button class="g-thumb on" type="button" data-type="img" data-src="/assets/img/bear-spray-cage-1.jpg" data-alt="Orange Bear Spray Cage next to a black cage fitted to a can of bear spray" aria-label="Photo 1"><img src="/assets/img/bear-spray-cage-1-thumb.jpg" alt="" loading="lazy"></button>
@@ -18,12 +19,6 @@ description: Bear Spray Cage, designed and 3D printed by Arkos Designs.
     <button class="g-thumb vid" type="button" data-type="video" data-src="/assets/video/bear-spray-holder-print.mp4" data-poster="/assets/img/print-poster.jpg" data-alt="Timelapse of the Bear Spray Cage printing in PETG" aria-label="Print timelapse video"><img src="/assets/img/print-poster.jpg" alt="" loading="lazy"></button>
   </div>
 </div>
-<script>
-(function(){var g=document.getElementById('gallery');if(!g)return;var main=g.querySelector('.g-main'),btns=g.querySelectorAll('.g-thumb');
-btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');main.textContent='';
-if(b.dataset.type==='video'){var v=document.createElement('video');v.controls=true;v.muted=true;v.loop=true;v.setAttribute('playsinline','');v.poster=b.dataset.poster;v.setAttribute('aria-label',b.dataset.alt);var s=document.createElement('source');s.src=b.dataset.src;s.type='video/mp4';v.appendChild(s);main.appendChild(v);}
-else{var i=document.createElement('img');i.src=b.dataset.src;i.alt=b.dataset.alt;main.appendChild(i);}});});})();
-</script>
 
       <div>
         <h3 style="font-size:44px;margin-bottom:10px">Bear Spray Cage</h3>
@@ -38,5 +33,34 @@ else{var i=document.createElement('img');i.src=b.dataset.src;i.alt=b.dataset.alt
         <p class="fine">Secure checkout through Square.</p>
       </div>
     </div>
+
+    <div class="shop" id="wall-guards">
+      <div class="gallery">
+        <div class="g-main"><img src="/assets/img/door-knob-wall-guard-fox.jpg" alt="Black fox-shaped door knob wall guard mounted on a wall"></div>
+        <div class="g-thumbs">
+      <button class="g-thumb on" type="button" data-type="img" data-src="/assets/img/door-knob-wall-guard-fox.jpg" data-alt="Black fox-shaped door knob wall guard mounted on a wall" aria-label="Fox design"><img src="/assets/img/door-knob-wall-guard-fox-thumb.jpg" alt="" loading="lazy"></button>
+      <button class="g-thumb" type="button" data-type="img" data-src="/assets/img/door-knob-wall-guard-hummingbird.jpg" data-alt="Black hummingbird-shaped door knob wall guard mounted on a wall" aria-label="Hummingbird design"><img src="/assets/img/door-knob-wall-guard-hummingbird-thumb.jpg" alt="" loading="lazy"></button>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:44px;margin-bottom:10px">Door Knob Wall Guards</h3>
+        <div class="price">From $15</div>
+        <p>Stop door knobs from denting your walls with a guard shaped like an animal. Choose one of the designs shown, or send us your own animal and we will make it.</p>
+        <dl>
+          <dt>Designs</dt><dd>Fox and hummingbird</dd>
+          <dt>Custom</dt><dd>Choose or submit your own animal. Price depends on the design.</dd>
+          <dt>Process</dt><dd>Made in-house by Arkos Designs</dd>
+        </dl>
+        <a class="btn" href="mailto:arkosdesigns.info@gmail.com?subject=Door%20Knob%20Wall%20Guard%20order">Order or request a custom design</a>
+        <p class="fine">Tell us the design you want, or attach a picture of your own animal, and we will confirm the price.</p>
+      </div>
+    </div>
+
   </div>
 </section>
+<script>
+document.querySelectorAll('.gallery').forEach(function(g){var main=g.querySelector('.g-main'),btns=g.querySelectorAll('.g-thumb');
+btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');main.textContent='';
+if(b.dataset.type==='video'){var v=document.createElement('video');v.controls=true;v.muted=true;v.loop=true;v.setAttribute('playsinline','');v.poster=b.dataset.poster;v.setAttribute('aria-label',b.dataset.alt);var s=document.createElement('source');s.src=b.dataset.src;s.type='video/mp4';v.appendChild(s);main.appendChild(v);}
+else{var i=document.createElement('img');i.src=b.dataset.src;i.alt=b.dataset.alt;main.appendChild(i);}});});});
+</script>
